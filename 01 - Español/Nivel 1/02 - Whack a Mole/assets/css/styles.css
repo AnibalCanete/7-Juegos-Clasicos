@@ -1,0 +1,19 @@
+
+/* Estilos */
+.cuadricula-grid {
+    width: 606px;
+    height: 606px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cuadrado-square {
+    height: 200px;
+    width: 200px;
+    border: 1px solid black; 
+}
+
+.topo-mole {
+    background-image: url("images/mole.jpg");
+    background-size: cover;
+}
