@@ -1,0 +1,22 @@
+
+/* Estilos - Styles */
+.cuadricula-grid {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    border-style: solid;
+}
+
+.cuadricula-grid div {
+    width: 20px;
+    height: 20px;
+}
+
+.serpiente-snake {
+    background-color: blue;
+}
+
+.manzana-apple {
+    background-color: purple;
+}
