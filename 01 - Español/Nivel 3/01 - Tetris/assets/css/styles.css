@@ -1,0 +1,326 @@
+
+/* Variables */
+:root {
+    /*
+        El tamaño de fuente predeterminado en los navegadores es de 16px = 1em
+        Para simplificar, establecemos 10px como tamaño base.
+        Tenemos 10/16 = 0.625 = 1rem, ya que está definido en el elemento raíz.
+        Por lo tanto, 1 rem ahora equivale a 10px en toda nuestra hoja de estilos.
+    */
+    font-size: 0.625em;
+}
+
+/* Estilos Globales - Global Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Monserrat", sans-serif;
+    font-size: 1.6rem;
+    margin: auto;
+    max-width: 60rem;
+    color: #d8edea;
+    background: radial-gradient(circle, rgba(175, 196, 174, 1) 0%, rgba(104, 204, 191, 1) 89%, rgba(94, 191, 178, 1) 100%);
+}
+
+header {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+div {
+    height: 2rem;
+    width: 2rem;
+}
+
+/* Algunas Clases de Utilidad - Some Utility Classes */
+.texto-mayuscula {
+    text-transform: uppercase;
+}
+
+.text-grande {
+    font-size: 1.5em;
+}
+
+.texto-ancho {
+    letter-spacing: 1.5rem;
+}
+
+.texto-cerrar {
+    letter-spacing: 1rem;
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.puntaje-display {
+    font-size: 5rem;
+    color: rgb(133, 121, 107, 0.5);
+}
+
+.juego-area {
+    display: flex;
+    justify-content: center;
+}
+
+.juego {
+    height: 0;
+    width: 300px;
+}
+
+.cuadricula {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 20rem;
+    height: 40rem;
+}
+
+.forma-anterior {
+    width: 10rem;
+    padding-left: 2rem;
+    margin-top: -5rem;
+}
+
+.cuadricula-anterior {
+    display: flex;
+    flex-wrap: wrap;
+    width: 8rem;
+    height: 8rem;
+}
+
+.bloque {
+    background-image: url("../images/blue_block.png");
+}
+
+.bloque-2 {
+    background-image: url("../images/purple_block.png");
+}
+
+.bloque-3 {
+    background-image: url("../images/green_block.png");
+}
+
+.bloque-4 {
+    background-image: url("../images/navy_block.png");
+}
+
+.bloque-5 {
+    background-image: url("../images/pink_block.png");
+}
+
+.fin {
+    background-color: #d8edea;
+}
+
+.boton {
+    position: relative;
+    width: 22rem;
+    height: 2.2rem;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 1px;
+    text-decoration: none;
+    line-height: 23px;
+    font-size: 10px;
+    display: block;
+    margin: 30px;
+    text-shadow: -1px -1px 0 #a84155;
+    background: #d25068;
+    border: 1px solid #d25068;
+    width: 12rem;
+    background-image: linear-gradient(bottom, #f66c7b, #d25068);
+    border-radius: 5px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 -1px 0 rgba(255, 255, 255, 0.1) inset, 0 4px 0 #ad4257, 0 4px 2px rgba(0, 0, 0, 0.5);
+}
+
+.boton:before {
+    background: #f0f0f0;
+    background-image: linear-gradient(#d0d0d0, #f0f0f0);
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) inset, 0 1px 0 #fff;
+    position: absolute;
+    content: "";
+    left: -6px;
+    right: -6px;
+    top: -6px;
+    bottom: -10px;
+    z-index: -1;
+}
+
+.boton:active {
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+    top: 5px;
+}
+
+.boton:active:before {
+    top: -11px;
+    bottom: -5px;
+    content: "";
+}
+
+.boton:hover {
+    background: #f66c7b;
+    background-image: linear-gradient(top, #d25068, #f66c7b);
+}
+
+.fin {
+    
+    background-image: url("../images/blue_block.png");
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-top: 1rem;
+    width: 17.5rem;
+    height: 25rem;
+    background: #f0f0f0;
+    background-image: linear-gradient(#d0d0d0, #f0f0f0);
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) inset, 0 1px 0 #fff;
+    color: #85796b;
+}
+
+.puntaje, .lineas-display {
+    padding-top: 1rem;
+    font-size: 1.2rem;
+}
+
+/* Menu */
+.container {
+    max-width: 600px;
+    padding: 0 3rem;
+    margin: auto;
+    overflow: hidden;
+}
+
+.btn:hover {
+    opacity: 0.7;
+}
+
+/* Inicio del Estilo del Menu - Start of Menu Styling */
+.menu-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.menu-wrap .interruptor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.menu-wrap .hamburguesa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    padding: 1rem;
+    background: rgba(13, 110, 139, 0.75);
+    align-items: center;
+    justify-content: center;
+}
+
+/* Linea de Hamburguesa - Hamburger Line */
+.menu-wrap .hamburguesa > div {
+    position: relative;
+    display: flex;
+    width: 150%;
+    height: 2px;
+    background: #fff;
+    flex: none;
+    align-items: center;
+    justify-center: center;
+    transition: all 0.4s ease;
+}
+
+/* Filas de Hamburguesas/Arriba y Abajo - Hamburger Lines/Top & Bottom */
+.menu-wrap .hamburguesa > div:before, .menu-wrap .hamburguesa > div:after {
+    position: absolute;
+    top: -7px;
+    z-index: 1;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+    content: "";
+}
+
+/* Mueve la Linea hacia Abajo - Moves Line Down */
+.menu-wrap .hamburguesa > div:after {
+    top: 7px;
+}
+
+/* Animación del Interruptor - Toggler Animation */
+.menu-wrap .interruptor:checked + .hamburguesa > div {
+    transform: rotate(135deg);
+}
+
+/* Convierte Líneas en X - Turns Lines Into X */
+.menu-wrap .interruptor:checked + .hamburguesa > div:before, .menu-wrap .interruptor:checked + .hamburguesa > div:after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+/* Girar al Pasar el Cursor Cuando Este Marcado - Rotate On Hover When Checked */
+.menu-wrap .interruptor:checked:hover + .hamburguesa > div {
+    transform: rotate(225deg);
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(24, 39, 51, 0.85);
+}
+
+.menu-contenido {
+    text-align: center;
+    width: 600px;
+    align-items: center;
+    margin-top: 230px;
+    justify-content: center;
+    width: 200vw;
+    height: 200vh;
+    border-radius: 50%;
+    transition: all 0.8s ease;
+}
+
+.reglas {
+    font-size: 12px;
+    transition: color 0.4s ease;
+}
+
+.llave {
+    color: #f8de7e;
+}
+
+.cerrar {
+    border-radius: 5px;
+    color: rgba(24, 39, 51, 0.85);
+}
