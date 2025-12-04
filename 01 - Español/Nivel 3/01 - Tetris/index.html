@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tetris</title>
+        <!-- Fuentes - Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap">
+        <!-- Estilos - Styles -->
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <!-- JavaScript -->
+        <script src="assets/js/scripts.js" charset="UTF-8"></script>
+    </head>
+    <body>
+        <div class="menu-wrap">
+            <input type="checkbox" class="interruptor">
+            <div class="hamburguesa">
+                <div></div>
+            </div>
+            <div class="menu">
+                <div class="menu-contenido">
+                    <h2 class="texto-mayuscula">Reglas</h2>
+                    <p class="reglas">
+                        Utilice la tecla <b class="llave">ARRIBA</b> para girar su tetrominó y <b class="llave">IZQUIERDA</b>
+                        y <b class="llave">DERECHA</b> para <br> moverse por el tablero. Pulse <b class="llave">ABAJO</b> para acelerar el tetrominó.
+                    </p>
+                    <button class="cerrar fw-400">X</button>
+                </div>
+            </div>
+        </div>
+
+        <header>
+            <h1 class="fw-300 texto-mayuscula">
+                Bienvenido <br>
+                <span class="fw-400 texto-ancho texto-grande texto-mayuscula">a Tetris</span>
+            </h1>
+        </header>
+        <main class="juego-area">
+            <div class="juego">
+                <div class="cuadricula"></div>
+            </div>
+            <section>
+                <div class="display">
+                    <h1 class="puntaje fw-400 texto-mayuscula">
+                        Tu Puntaje <br>
+                        <span class="puntaje-display texto-mayuscula fw-300">0</span>
+                    </h1>
+                    <div class="forma-anterior">
+                        <div class="cuadricula-anterior"></div>
+                    </div>
+                    <h2 class="lineas-display fw-400 texto-mayuscula">
+                        Lineas: <span class="lineas-puntaje">0</span>
+                    </h2>
+                </div>
+                <button class="boton texto-mayuscula" href="#">Iniciar/Pausar</button>
+                <small class="footer texto-mayuscula">Hecho en 2025</small>
+            </section>
+        </main>
+    </body>
+</html>
