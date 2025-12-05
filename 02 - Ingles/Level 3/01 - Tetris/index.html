@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tetris</title>
+        <!-- Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap">
+        <!-- Styles -->
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <!-- JavaScript -->
+        <script src="assets/js/scripts.js" charset="UTF-8"></script>
+    </head>
+    <body>
+        <div class="menu-wrap">
+            <input type="checkbox" class="toggle">
+            <div class="hamburger">
+                <div></div>
+            </div>
+            <div class="menu">
+                <div class="menu-content">
+                    <h2 class="t-ucase">Rules</h2>
+                    <p class="rules">
+                        Please Use The <b class="key">UP</b> Key To Rotate Your Tetromino, and <b class="key">LEFT</b>
+                        and <b class="key">RIGHT</b> To <br> Move Across The Board. Pressing <b class="key">DOWN</b> Will Speed Up The Tetromino.
+                    </p>
+                    <button class="close fw-400">X</button>
+                </div>
+            </div>
+        </div>
+
+        <header>
+            <h1 class="fw-300 t-ucase">
+                Welcome <br>
+                <span class="fw-400 t-wide t-big t-ucase">To Tetris</span>
+            </h1>
+        </header>
+        <main class="game-area">
+            <div class="game">
+                <div class="grid"></div>
+            </div>
+            <section>
+                <div class="display">
+                    <h1 class="score fw-400 t-ucase">
+                        Your Score <br>
+                        <span class="score-display t-ucase fw-300">0</span>
+                    </h1>
+                    <div class="previous-shape">
+                        <div class="previous-grid"></div>
+                    </div>
+                    <h2 class="lines-display fw-400 t-ucase">
+                        Lines: <span class="lines-score">0</span>
+                    </h2>
+                </div>
+                <button class="button t-ucase" href="#">Start / Pause</button>
+                <small class="footer t-ucase">Made in 2025</small>
+            </section>
+        </main>
+    </body>
+</html>
